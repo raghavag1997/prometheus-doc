@@ -1,0 +1,49 @@
+sudo wget https://github.com/prometheus/prometheus/releases/download/v2.41.0/prometheus-2.41.0.linux-amd64.tar.gz
+ls
+   12  tar -xvf prometheus-2.41.0.linux-amd64.tar.gz
+   13  ls
+   14  cd prometheus-2.41.0.linux-amd64/
+   15  ls
+   16  ./prom
+   17  ./prometheus
+   18  cd /etc/systemd/
+   19  ls
+   20  cd system/
+   21  ls
+   22  cat sshd.service
+   27  sudo useradd --no-create-home --shell /bin/false prometheus
+   28  cat /etc/passwd
+   29  ls
+   30  cd prometheus-2.41.0.linux-amd64/
+   32  ls
+   33  mkdir /etc/prometheus
+   34  sudo mkdir /etc/prometheus
+   35  sudo cp prometheus.yml /etc/prometheus/
+   36  sudo mkdir /var/lib/prometheus
+   37  sudo chown prometheus:prometheus /etc/prometheus/
+   38  sudo chown prometheus:prometheus /var/lib/prometheus/
+   39  sudo cp prometheus /usr/local/bin/
+   40  sudo cp promtool /usr/local/bin/
+   41  sudo chown prometheus:prometheus /usr/local/bin/promtool
+   42  sudo chown prometheus:prometheus /usr/local/bin/prometheus
+   43  sudo cp -r console console_libraries/ /etc/prometheus/
+   44  sudo cp -r consoles console_libraries/ /etc/prometheus/
+   45  sudo chown -R prometheus:prometheus  /etc/prometheus/consoles/
+   46  sudo chown -R prometheus:prometheus  /etc/prometheus/console_libraries/
+   47  sudo vi /etc/systemd/
+   48  sudo vi /etc/systemd/system/prometheus.service
+   49  cat /etc/systemd/system/prometheus.service
+   50  ls /etc/prometheus/consoles
+   51  ls /etc/prometheus/console_libraries/
+   52  sudo systemctl  daemon-reload
+   53  sudo systemctl start prometheus
+   54  sudo systemctl status prometheus
+   55  sudo systemctl stop prometheus
+   56  sudo systemctl status prometheus
+   57  sudo vi /etc/systemd/system/prometheus.service
+   58  sudo systemctl status prometheus
+   59  sudo systemctl  daemon-reload
+   60  sudo systemctl start prometheus
+   61  sudo systemctl status prometheus
+   62  sudo systemctl stop prometheus
+ sudo systemctl status prometheus
